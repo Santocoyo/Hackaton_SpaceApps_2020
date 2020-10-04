@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <title>Breaktrough</title>
+</head>
+<body background="./img/background.jpg">
+    <audio id="myAudio" src="./audio/background_music.mp3" loop="true">
+        Your browser does not support the <code>audio</code> element.
+    </audio>
+
+    <div class="audioButton">
+        <button class="ab btn btn-secondary" onclick="audiobtn()">Audio</button>
+    </div>
+
+    <div class="instButton">
+        <button class="inbu btn btn-info" onclick="instbtn()">Instructions</button>
+    </div>
+
+    <div class="popup__field container">
+        <div class="row align-content-center justify-content-center text-center">
+            <div class="jumbotron col-8">
+                <button class="popup__exit btn btn-danger" onclick="disappear()"><i class="fa fa-times-circle" aria-hidden="true"></i></button>
+                <h1 class="popup__title">Main title</h1>
+                <img class="popup__img" src="./img/favicon.png" alt="">
+                <p class="popup__desc mt-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam iusto voluptates maxime alias quasi iure molestiae accusantium provident minus a.</p>
+                <p class="popup__mess mt-2 rounded-lg">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique fuga iusto sit soluta sed quisquam voluptatum vitae? Asperiores, mollitia pariatur?</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="header container rounded-lg fixed-top">
+        <div class="row justify-content-center py-1">
+            <div class="col-2 pt-1 text-center">Resources</div>
+
+            <div class="col-2">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-5 text-right">
+                        <img src="./img/icons/resources/WATER.png" alt="Water" width="30px">
+                    </div>
+                    <div class="col-5 text-left pt-1 water__value">
+                        99.99
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+
+            <div class="col-2">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-5 text-right">
+                        <img src="./img/icons/resources/ENERGY.png" alt="Energy" width="30px">
+                    </div>
+                    <div class="col-5 text-left pt-1 energy__value">
+                        99.99
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+
+            <div class="col-2">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-5 text-right">
+                        <img src="./img/icons/resources/MATERIALS.png" alt="Materials" width="30px">
+                    </div>
+                    <div class="col-5 text-left pt-1 materials__value">
+                        99.99
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+
+            <div class="col-2">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-5 text-right">
+                        <img src="./img/icons/resources/ANTIMATTER.png" alt="Anti-Matter" width="30px">
+                    </div>
+                    <div class="col-5 text-left pt-1 antimatter__value">
+                        99.99
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+
+            <div class="col-2">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-5 text-right">
+                        <img src="./img/icons/resources/SCIENCE.png" alt="Science" width="30px">
+                    </div>
+                    <div class="col-5 text-left pt-1 science__value">
+                        99.99
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="text-center mt-5">Journey to the Stars</h1>
+    <div class="container-fluid">
+        <div class="row text-center">
+            <div class="col-3 jumbotron myContainer">
+                <h2>Missions</h2>
+                <hr >
+
+                <div class="mission__list">
+                    
+                    <div id="miss1" class="row mission__completed align-content-center justify-content-center text-center rounded-lg mission__item p-1 mb-1">
+                        <div class="col-10">
+                            <div class="row">
+                                <div class="col-12 mission__title">a</div>
+                            </div>
+                            <div class="row mission__reqs">
+                                <!-- <div class="col-auto mission__resource"> <img src="./img/icons/units/1.png">x<span class="mission__unit_qty">99</span></div> -->
+                            </div>
+                            <div class="col-12">
+                                <button class="mission__btn-try btn btn-sm btn-success">Try mission</button>
+                                <button class="mission__btn-info btn btn-sm btn-info">Info</button>
+                            </div>
+                        </div>
+                        <!-- <div class="row">
+                            <button class="btn btn-sm btn-info">Ver misión</button>
+                        </div> -->
+                    </div>
+                    
+                    <div id="miss2" class="row mission__completed align-content-center justify-content-center text-center rounded-lg mission__item p-1 mb-1">
+                        <div class="col-10">
+                            <div class="row">
+                                <div class="col-12 mission__title">Special mining</div>
+                            </div>
+                            <div class="row mission__reqs">
+                                
+                            </div>
+                            <div class="col-12">
+                                <button class="mission__btn-try btn btn-sm btn-success">Try mission</button>
+                                <button class="mission__btn-info btn btn-sm btn-info">Info</button>
+                            </div>
+                        </div>
+                        <!-- <div class="row">
+                            <button class="btn btn-sm btn-info">Ver misión</button>
+                        </div> -->
+                    </div>
+                    
+                    <div  id="miss3" class="row mission__unblock align-content-center justify-content-center text-center rounded-lg mission__item p-1 mb-1">
+                        <div class="col-10">
+                            <div class="row">
+                                <div class="col-12 mission__title">An unusual Earth</div>
+                            </div>
+                            <div class="row mission__reqs">
+                                
+                            </div>
+                            <div class="col-12">
+                                <button class="mission__btn-try btn btn-sm btn-success">Try mission</button>
+                                <button class="mission__btn-info btn btn-sm btn-info">Info</button>
+                            </div>
+                        </div>
+                        <!-- <div class="row">
+                            <button class="btn btn-sm btn-info">Ver misión</button>
+                        </div> -->
+                    </div>
+                    
+                    <div  id="miss4" class="row mission__block align-content-center justify-content-center text-center rounded-lg mission__item p-1 mb-1">
+                        <div class="col-10">
+                            <div class="row">
+                                <div class="col-12 mission__title">The frozen moons</div>
+                            </div>
+                            <div class="row mission__reqs">
+                                
+                            </div>
+                            <div class="col-12">
+                                <button class="mission__btn-try btn btn-sm btn-success">Try mission</button>
+                                <button class="mission__btn-info btn btn-sm btn-info">Info</button>
+                            </div>
+                        </div>
+                        <!-- <div class="row">
+                            <button class="btn btn-sm btn-info">Ver misión</button>
+                        </div> -->
+                    </div>
+                    
+                    <div id="miss5" class="row mission__block align-content-center justify-content-center text-center rounded-lg mission__item p-1 mb-1">
+                        <div class="col-10">
+                            <div class="row">
+                                <div class="col-12 mission__title">Beyond Neptune</div>
+                            </div>
+                            <div class="row mission__reqs">
+                                
+                            </div>
+                            <div class="col-12">
+                                <button class="mission__btn-try btn btn-sm btn-success">Try mission</button>
+                                <button class="mission__btn-info btn btn-sm btn-info">Info</button>
+                            </div>
+                        </div>
+                        <!-- <div class="row">
+                            <button class="btn btn-sm btn-info">Ver misión</button>
+                        </div> -->
+                    </div>
+                    
+                    <div id="miss6" class="row mission__block align-content-center justify-content-center text-center rounded-lg mission__item p-1 mb-1">
+                        <div class="col-10">
+                            <div class="row">
+                                <div class="col-12 mission__title">Bullseye</div>
+                            </div>
+                            <div class="row mission__reqs">
+                                
+                            </div>
+                            <div class="col-12">
+                                <button class="mission__btn-try btn btn-sm btn-success">Try mission</button>
+                                <button class="mission__btn-info btn btn-sm btn-info">Info</button>
+                            </div>
+                        </div>
+                        <!-- <div class="row">
+                            <button class="btn btn-sm btn-info">Ver misión</button>
+                        </div> -->
+                    </div>
+                    
+                    <div id="miss7" class="row mission__block align-content-center justify-content-center text-center rounded-lg mission__item p-1 mb-1">
+                        <div class="col-10">
+                            <div class="row">
+                                <div class="col-12 mission__title">A first glimpse of the stars</div>
+                            </div>
+                            <div class="row mission__reqs">
+                                
+                            </div>
+                            <div class="col-12">
+                                <button class="mission__btn-try btn btn-sm btn-success">Try mission</button>
+                                <button class="mission__btn-info btn btn-sm btn-info">Info</button>
+                            </div>
+                        </div>
+                        <!-- <div class="row">
+                            <button class="btn btn-sm btn-info">Ver misión</button>
+                        </div> -->
+                    </div>
+                    
+                    <div id="miss8" class="row mission__block align-content-center justify-content-center text-center rounded-lg mission__item p-1 mb-1">
+                        <div class="col-10">
+                            <div class="row">
+                                <div class="col-12 mission__title">A road straight to heaven</div>
+                            </div>
+                            <div class="row mission__reqs">
+                                
+                            </div>
+                            <div class="col-12">
+                                <button class="mission__btn-try btn btn-sm btn-success">Try mission</button>
+                                <button class="mission__btn-info btn btn-sm btn-info">Info</button>
+                            </div>
+                        </div>
+                        <!-- <div class="row">
+                            <button class="btn btn-sm btn-info">Ver misión</button>
+                        </div> -->
+                    </div>
+                    
+                    <div id="miss9" class="row mission__block align-content-center justify-content-center text-center rounded-lg mission__item p-1 mb-1">
+                        <div class="col-10">
+                            <div class="row">
+                                <div class="col-12 mission__title">Infinite skies</div>
+                            </div>
+                            <div class="row mission__reqs">
+                                
+                            </div>
+                            <div class="col-12">
+                                <button class="mission__btn-try btn btn-sm btn-success">Try mission</button>
+                                <button class="mission__btn-info btn btn-sm btn-info">Info</button>
+                            </div>
+                        </div>
+                        <!-- <div class="row">
+                            <button class="btn btn-sm btn-info">Ver misión</button>
+                        </div> -->
+                    </div>
+                    
+                    <div id="miss10" class="row mission__block align-content-center justify-content-center text-center rounded-lg mission__item p-1 mb-1">
+                        <div class="col-10">
+                            <div class="row">
+                                <div class="col-12 mission__title">The last frontier</div>
+                            </div>
+                            <div class="row mission__reqs">
+                                
+                            </div>
+                            <div class="col-12">
+                                <button class="mission__btn-try btn btn-sm btn-success">Try mission</button>
+                                <button class="mission__btn-info btn btn-sm btn-info">Info</button>
+                            </div>
+                        </div>
+                        <!-- <div class="row">
+                            <button class="btn btn-sm btn-info">Ver misión</button>
+                        </div> -->
+                    </div>
+                    
+                    <div id="miss11" class="row mission__block align-content-center justify-content-center text-center rounded-lg mission__item p-1 mb-1">
+                        <div class="col-10">
+                            <div class="row">
+                                <div class="col-12 mission__title">The swarm</div>
+                            </div>
+                            <div class="row mission__reqs">
+                                
+                            </div>
+                            <div class="col-12">
+                                <button class="mission__btn-try btn btn-sm btn-success">Try mission</button>
+                                <button class="mission__btn-info btn btn-sm btn-info">Info</button>
+                            </div>
+                        </div>
+                        <!-- <div class="row">
+                            <button class="btn btn-sm btn-info">Ver misión</button>
+                        </div> -->
+                    </div>
+                    
+                    <div id="miss12" class="row mission__block align-content-center justify-content-center text-center rounded-lg mission__item p-1 mb-1">
+                        <div class="col-10">
+                            <div class="row">
+                                <div class="col-12 mission__title">Deeper into the microworld</div>
+                            </div>
+                            <div class="row mission__reqs">
+                                
+                            </div>
+                            <div class="col-12">
+                                <button class="mission__btn-try btn btn-sm btn-success">Try mission</button>
+                                <button class="mission__btn-info btn btn-sm btn-info">Info</button>
+                            </div>
+                        </div>
+                        <!-- <div class="row">
+                            <button class="btn btn-sm btn-info">Ver misión</button>
+                        </div> -->
+                    </div>
+                    
+                    <div id="miss13" class="row mission__block align-content-center justify-content-center text-center rounded-lg mission__item p-1 mb-1">
+                        <div class="col-10">
+                            <div class="row">
+                                <div class="col-12 mission__title">Folding the universe</div>
+                            </div>
+                            <div class="row mission__reqs">
+                                
+                            </div>
+                            <div class="col-12">
+                                <button class="mission__btn-try btn btn-sm btn-success">Try mission</button>
+                                <button class="mission__btn-info btn btn-sm btn-info">Info</button>
+                            </div>
+                        </div>
+                        <!-- <div class="row">
+                            <button class="btn btn-sm btn-info">Ver misión</button>
+                        </div> -->
+                    </div>
+                    
+                    <div id="miss14" class="row mission__block align-content-center justify-content-center text-center rounded-lg mission__item p-1 mb-1">
+                        <div class="col-10">
+                            <div class="row">
+                                <div class="col-12 mission__title">To the stars</div>
+                            </div>
+                            <div class="row mission__reqs">
+                                
+                            </div>
+                            <div class="col-12">
+                                <button class="mission__btn-try btn btn-sm btn-success">Try mission</button>
+                                <button class="mission__btn-info btn btn-sm btn-info">Info</button>
+                            </div>
+                        </div>
+                        <!-- <div class="row">
+                            <button class="btn btn-sm btn-info">Ver misión</button>
+                        </div> -->
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-6 tech__panel jumbotron">
+                <h1 style="color: black;">Technologies</h1>
+                <div class="tech__list container-fluid">
+                    <div class="row">
+
+                        <div id="tech1" class="col-4 tech__completed align-content-center justify-content-center text-center rounded-lg tech__item p-1 mb-1">
+                            <div class="col-12 tech__image"><img class="tech__imagesrc" src="./img/favicon.png"></div>
+                            <div class="col-12 tech__title">To the stars</div>
+                            <div class="row">
+                                <div class="col-12 tech__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="tech__science">99</span></div>
+                                <div class="col-12">
+                                    <button class="tech__btn_obtain btn btn-sm btn-success">Obtain</button>
+                                    <button class="tech__btn_info btn btn-sm btn-info">Info</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tech2" class="col-4 tech__unblock align-content-center justify-content-center text-center rounded-lg tech__item p-1 mb-1">
+                            <div class="col-12 tech__image"><img class="tech__imagesrc" src="./img/favicon.png"></div>
+                            <div class="col-12 tech__title">To the stars</div>
+                            <div class="row">
+                                
+                                <div class="col-12 tech__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="tech__science">99</span></div>
+                                <div class="col-12">
+                                    <button class="tech__btn_obtain btn btn-sm btn-success">Obtain</button>
+                                    <button class="tech__btn_info btn btn-sm btn-info">Info</button>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tech3" class="col-4 tech__block align-content-center justify-content-center text-center rounded-lg tech__item p-1 mb-1">
+                            <div class="col-12 tech__image"><img class="tech__imagesrc" src="./img/favicon.png"></div>
+                            <div class="col-12 tech__title">To the stars</div>
+                            <div class="row">
+                                
+                                <div class="col-12 tech__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="tech__science">99</span></div>
+                                <div class="col-12">
+                                    <button class="tech__btn_obtain btn btn-sm btn-success">Obtain</button>
+                                    <button class="tech__btn_info btn btn-sm btn-info">Info</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tech4" class="col-4 tech__block align-content-center justify-content-center text-center rounded-lg tech__item p-1 mb-1">
+                            <div class="col-12 tech__image"><img class="tech__imagesrc" src="./img/favicon.png"></div>
+                            <div class="col-12 tech__title">To the stars</div>
+                            <div class="row">
+                                
+                                <div class="col-12 tech__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="tech__science">99</span></div>
+                                <div class="col-12">
+                                    <button class="tech__btn_obtain btn btn-sm btn-success">Obtain</button>
+                                    <button class="tech__btn_info btn btn-sm btn-info">Info</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tech5" class="col-4 tech__block align-content-center justify-content-center text-center rounded-lg tech__item p-1 mb-1">
+                            <div class="col-12 tech__image"><img class="tech__imagesrc" src="./img/favicon.png"></div>
+                            <div class="col-12 tech__title">To the stars</div>
+                            <div class="row">
+                                
+                                <div class="col-12 tech__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="tech__science">99</span></div>
+                                <div class="col-12">
+                                    <button class="tech__btn_obtain btn btn-sm btn-success">Obtain</button>
+                                    <button class="tech__btn_info btn btn-sm btn-info">Info</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tech6" class="col-4 tech__block align-content-center justify-content-center text-center rounded-lg tech__item p-1 mb-1">
+                            <div class="col-12 tech__image"><img class="tech__imagesrc" src="./img/favicon.png"></div>
+                            <div class="col-12 tech__title">To the stars</div>
+                            <div class="row">
+                                
+                                <div class="col-12 tech__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="tech__science">99</span></div>
+                                <div class="col-12">
+                                    <button class="tech__btn_obtain btn btn-sm btn-success">Obtain</button>
+                                    <button class="tech__btn_info btn btn-sm btn-info">Info</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tech7" class="col-4 tech__block align-content-center justify-content-center text-center rounded-lg tech__item p-1 mb-1">
+                            <div class="col-12 tech__image"><img class="tech__imagesrc" src="./img/favicon.png"></div>
+                            <div class="col-12 tech__title">To the stars</div>
+                            <div class="row">
+                                
+                                <div class="col-12 tech__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="tech__science">99</span></div>
+                                <div class="col-12">
+                                    <button class="tech__btn_obtain btn btn-sm btn-success">Obtain</button>
+                                    <button class="tech__btn_info btn btn-sm btn-info">Info</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tech8" class="col-4 tech__block align-content-center justify-content-center text-center rounded-lg tech__item p-1 mb-1">
+                            <div class="col-12 tech__image"><img class="tech__imagesrc" src="./img/favicon.png"></div>
+                            <div class="col-12 tech__title">To the stars</div>
+                            <div class="row">
+                                
+                                <div class="col-12 tech__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="tech__science">99</span></div>
+                                <div class="col-12">
+                                    <button class="tech__btn_obtain btn btn-sm btn-success">Obtain</button>
+                                    <button class="tech__btn_info btn btn-sm btn-info">Info</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tech9" class="col-4 tech__block align-content-center justify-content-center text-center rounded-lg tech__item p-1 mb-1">
+                            <div class="col-12 tech__image"><img class="tech__imagesrc" src="./img/favicon.png"></div>
+                            <div class="col-12 tech__title">To the stars</div>
+                            <div class="row">
+                                
+                                <div class="col-12 tech__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="tech__science">99</span></div>
+                                <div class="col-12">
+                                    <button class="tech__btn_obtain btn btn-sm btn-success">Obtain</button>
+                                    <button class="tech__btn_info btn btn-sm btn-info">Info</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tech10" class="col-4 tech__block align-content-center justify-content-center text-center rounded-lg tech__item p-1 mb-1">
+                            <div class="col-12 tech__image"><img class="tech__imagesrc" src="./img/favicon.png"></div>
+                            <div class="col-12 tech__title">To the stars</div>
+                            <div class="row">
+                                
+                                <div class="col-12 tech__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="tech__science">99</span></div>
+                                <div class="col-12">
+                                    <button class="tech__btn_obtain btn btn-sm btn-success">Obtain</button>
+                                    <button class="tech__btn_info btn btn-sm btn-info">Info</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tech11" class="col-4 tech__block align-content-center justify-content-center text-center rounded-lg tech__item p-1 mb-1">
+                            <div class="col-12 tech__image"><img class="tech__imagesrc" src="./img/favicon.png"></div>
+                            <div class="col-12 tech__title">To the stars</div>
+                            <div class="row">
+                                
+                                <div class="col-12 tech__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="tech__science">99</span></div>
+                                <div class="col-12">
+                                    <button class="tech__btn_obtain btn btn-sm btn-success">Obtain</button>
+                                    <button class="tech__btn_info btn btn-sm btn-info">Info</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tech12" class="col-4 tech__block align-content-center justify-content-center text-center rounded-lg tech__item p-1 mb-1">
+                            <div class="col-12 tech__image"><img class="tech__imagesrc" src="./img/favicon.png"></div>
+                            <div class="col-12 tech__title">To the stars</div>
+                            <div class="row">
+                                
+                                <div class="col-12 tech__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="tech__science">99</span></div>
+                                <div class="col-12">
+                                    <button class="tech__btn_obtain btn btn-sm btn-success">Obtain</button>
+                                    <button class="tech__btn_info btn btn-sm btn-info">Info</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tech13" class="col-4 tech__block align-content-center justify-content-center text-center rounded-lg tech__item p-1 mb-1">
+                            <div class="col-12 tech__image"><img class="tech__imagesrc" src="./img/favicon.png"></div>
+                            <div class="col-12 tech__title">To the stars</div>
+                            <div class="row">
+                                
+                                <div class="col-12 tech__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="tech__science">99</span></div>
+                                <div class="col-12">
+                                    <button class="tech__btn_obtain btn btn-sm btn-success">Obtain</button>
+                                    <button class="tech__btn_info btn btn-sm btn-info">Info</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tech14" class="col-4 tech__block align-content-center justify-content-center text-center rounded-lg tech__item p-1 mb-1">
+                            <div class="col-12 tech__image"><img class="tech__imagesrc" src="./img/favicon.png"></div>
+                            <div class="col-12 tech__title">To the stars</div>
+                            <div class="row">
+                                
+                                <div class="col-12 tech__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="tech__science">99</span></div>
+                                <div class="col-12">
+                                    <button class="tech__btn_obtain btn btn-sm btn-success">Obtain</button>
+                                    <button class="tech__btn_info btn btn-sm btn-info">Info</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tech15" class="col-4 tech__block align-content-center justify-content-center text-center rounded-lg tech__item p-1 mb-1">
+                            <div class="col-12 tech__image"><img class="tech__imagesrc" src="./img/favicon.png"></div>
+                            <div class="col-12 tech__title">To the stars</div>
+                            <div class="row">
+                                
+                                <div class="col-12 tech__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="tech__science">99</span></div>
+                                <div class="col-12">
+                                    <button class="tech__btn_obtain btn btn-sm btn-success">Obtain</button>
+                                    <button class="tech__btn_info btn btn-sm btn-info">Info</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tech16" class="col-4 tech__block align-content-center justify-content-center text-center rounded-lg tech__item p-1 mb-1">
+                            <div class="col-12 tech__image"><img class="tech__imagesrc" src="./img/favicon.png"></div>
+                            <div class="col-12 tech__title">To the stars</div>
+                            <div class="row">
+                                
+                                <div class="col-12 tech__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="tech__science">99</span></div>
+                                <div class="col-12">
+                                    <button class="tech__btn_obtain btn btn-sm btn-success">Obtain</button>
+                                    <button class="tech__btn_info btn btn-sm btn-info">Info</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tech17" class="col-4 tech__block align-content-center justify-content-center text-center rounded-lg tech__item p-1 mb-1">
+                            <div class="col-12 tech__image"><img class="tech__imagesrc" src="./img/favicon.png"></div>
+                            <div class="col-12 tech__title">To the stars</div>
+                            <div class="row">
+                                
+                                <div class="col-12 tech__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="tech__science">99</span></div>
+                                <div class="col-12">
+                                    <button class="tech__btn_obtain btn btn-sm btn-success">Obtain</button>
+                                    <button class="tech__btn_info btn btn-sm btn-info">Info</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tech18" class="col-4 tech__block align-content-center justify-content-center text-center rounded-lg tech__item p-1 mb-1">
+                            <div class="col-12 tech__image"><img class="tech__imagesrc" src="./img/favicon.png"></div>
+                            <div class="col-12 tech__title">To the stars</div>
+                            <div class="row">
+                                
+                                <div class="col-12 tech__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="tech__science">99</span></div>
+                                <div class="col-12">
+                                    <button class="tech__btn_obtain btn btn-sm btn-success">Obtain</button>
+                                    <button class="tech__btn_info btn btn-sm btn-info">Info</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tech19" class="col-4 tech__block align-content-center justify-content-center text-center rounded-lg tech__item p-1 mb-1">
+                            <div class="col-12 tech__image"><img class="tech__imagesrc" src="./img/favicon.png"></div>
+                            <div class="col-12 tech__title">To the stars</div>
+                            <div class="row">
+                                
+                                <div class="col-12 tech__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="tech__science">99</span></div>
+                                <div class="col-12">
+                                    <button class="tech__btn_obtain btn btn-sm btn-success">Obtain</button>
+                                    <button class="tech__btn_info btn btn-sm btn-info">Info</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tech20" class="col-4 tech__block align-content-center justify-content-center text-center rounded-lg tech__item p-1 mb-1">
+                            <div class="col-12 tech__image"><img class="tech__imagesrc" src="./img/favicon.png"></div>
+                            <div class="col-12 tech__title">To the stars</div>
+                            <div class="row">
+                                
+                                <div class="col-12 tech__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="tech__science">99</span></div>
+                                <div class="col-12">
+                                    <button class="tech__btn_obtain btn btn-sm btn-success">Obtain</button>
+                                    <button class="tech__btn_info btn btn-sm btn-info">Info</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tech21" class="col-4 tech__block align-content-center justify-content-center text-center rounded-lg tech__item p-1 mb-1">
+                            <div class="col-12 tech__image"><img class="tech__imagesrc" src="./img/favicon.png"></div>
+                            <div class="col-12 tech__title">To the stars</div>
+                            <div class="row">
+                                
+                                <div class="col-12 tech__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="tech__science">99</span></div>
+                                <div class="col-12">
+                                    <button class="tech__btn_obtain btn btn-sm btn-success">Obtain</button>
+                                    <button class="tech__btn_info btn btn-sm btn-info">Info</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tech22" class="col-4 tech__block align-content-center justify-content-center text-center rounded-lg tech__item p-1 mb-1">
+                            <div class="col-12 tech__image"><img class="tech__imagesrc" src="./img/favicon.png"></div>
+                            <div class="col-12 tech__title">To the stars</div>
+                            <div class="row">
+                                
+                                <div class="col-12 tech__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="tech__science">99</span></div>
+                                <div class="col-12">
+                                    <button class="tech__btn_obtain btn btn-sm btn-success">Obtain</button>
+                                    <button class="tech__btn_info btn btn-sm btn-info">Info</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tech23" class="col-4 tech__block align-content-center justify-content-center text-center rounded-lg tech__item p-1 mb-1">
+                            <div class="col-12 tech__image"><img class="tech__imagesrc" src="./img/favicon.png"></div>
+                            <div class="col-12 tech__title">To the stars</div>
+                            <div class="row">
+                                
+                                <div class="col-12 tech__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="tech__science">99</span></div>
+                                <div class="col-12">
+                                    <button class="tech__btn_obtain btn btn-sm btn-success">Obtain</button>
+                                    <button class="tech__btn_info btn btn-sm btn-info">Info</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tech24" class="col-4 tech__block align-content-center justify-content-center text-center rounded-lg tech__item p-1 mb-1">
+                            <div class="col-12 tech__image"><img class="tech__imagesrc" src="./img/favicon.png"></div>
+                            <div class="col-12 tech__title">To the stars</div>
+                            <div class="row">
+                                
+                                <div class="col-12 tech__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="tech__science">99</span></div>
+                                <div class="col-12">
+                                    <button class="tech__btn_obtain btn btn-sm btn-success">Obtain</button>
+                                    <button class="tech__btn_info btn btn-sm btn-info">Info</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tech25" class="col-4 tech__block align-content-center justify-content-center text-center rounded-lg tech__item p-1 mb-1">
+                            <div class="col-12 tech__image"><img class="tech__imagesrc" src="./img/favicon.png"></div>
+                            <div class="col-12 tech__title">To the stars</div>
+                            <div class="row">
+                                
+                                <div class="col-12 tech__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="tech__science">99</span></div>
+                                <div class="col-12">
+                                    <button class="tech__btn_obtain btn btn-sm btn-success">Obtain</button>
+                                    <button class="tech__btn_info btn btn-sm btn-info">Info</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tech26" class="col-4 tech__block align-content-center justify-content-center text-center rounded-lg tech__item p-1 mb-1">
+                            <div class="col-12 tech__image"><img class="tech__imagesrc" src="./img/favicon.png"></div>
+                            <div class="col-12 tech__title">To the stars</div>
+                            <div class="row">
+                                
+                                <div class="col-12 tech__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="tech__science">99</span></div>
+                                <div class="col-12">
+                                    <button class="tech__btn_obtain btn btn-sm btn-success">Obtain</button>
+                                    <button class="tech__btn_info btn btn-sm btn-info">Info</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tech27" class="col-4 tech__block align-content-center justify-content-center text-center rounded-lg tech__item p-1 mb-1">
+                            <div class="col-12 tech__image"><img class="tech__imagesrc" src="./img/favicon.png"></div>
+                            <div class="col-12 tech__title">To the stars</div>
+                            <div class="row">
+                                
+                                <div class="col-12 tech__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="tech__science">99</span></div>
+                                <div class="col-12">
+                                    <button class="tech__btn_obtain btn btn-sm btn-success">Obtain</button>
+                                    <button class="tech__btn_info btn btn-sm btn-info">Info</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tech28" class="col-4 tech__block align-content-center justify-content-center text-center rounded-lg tech__item p-1 mb-1">
+                            <div class="col-12 tech__image"><img class="tech__imagesrc" src="./img/favicon.png"></div>
+                            <div class="col-12 tech__title">To the stars</div>
+                            <div class="row">
+                                
+                                <div class="col-12 tech__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="tech__science">99</span></div>
+                                <div class="col-12">
+                                    <button class="tech__btn_obtain btn btn-sm btn-success">Obtain</button>
+                                    <button class="tech__btn_info btn btn-sm btn-info">Info</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tech29" class="col-4 tech__block align-content-center justify-content-center text-center rounded-lg tech__item p-1 mb-1">
+                            <div class="col-12 tech__image"><img class="tech__imagesrc" src="./img/favicon.png"></div>
+                            <div class="col-12 tech__title">To the stars</div>
+                            <div class="row">
+                                
+                                <div class="col-12 tech__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="tech__science">99</span></div>
+                                <div class="col-12">
+                                    <button class="tech__btn_obtain btn btn-sm btn-success">Obtain</button>
+                                    <button class="tech__btn_info btn btn-sm btn-info">Info</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tech30" class="col-4 tech__block align-content-center justify-content-center text-center rounded-lg tech__item p-1 mb-1">
+                            <div class="col-12 tech__image"><img class="tech__imagesrc" src="./img/favicon.png"></div>
+                            <div class="col-12 tech__title">To the stars</div>
+                            <div class="row">
+                                <div class="col-12 tech__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="tech__science">99</span></div>
+                                <div class="col-12">
+                                    <button class="tech__btn_obtain btn btn-sm btn-success">Obtain</button>
+                                    <button class="tech__btn_info btn btn-sm btn-info">Info</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tech31" class="col-4 tech__block align-content-center justify-content-center text-center rounded-lg tech__item p-1 mb-1">
+                            <div class="col-12 tech__image"><img class="tech__imagesrc" src="./img/favicon.png"></div>
+                            <div class="col-12 tech__title">To the stars</div>
+                            <div class="row">
+                                
+                                <div class="col-12 tech__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="tech__science">99</span></div>
+                                <div class="col-12">
+                                    <button class="tech__btn_obtain btn btn-sm btn-success">Obtain</button>
+                                    <button class="tech__btn_info btn btn-sm btn-info">Info</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tech32" class="col-4 tech__block align-content-center justify-content-center text-center rounded-lg tech__item p-1 mb-1">
+                            <div class="col-12 tech__image"><img class="tech__imagesrc" src="./img/favicon.png"></div>
+                            <div class="col-12 tech__title">To the stars</div>
+                            <div class="row">
+                                
+                                <div class="col-12 tech__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="tech__science">99</span></div>
+                                <div class="col-12">
+                                    <button class="tech__btn_obtain btn btn-sm btn-success">Obtain</button>
+                                    <button class="tech__btn_info btn btn-sm btn-info">Info</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tech33" class="col-4 tech__block align-content-center justify-content-center text-center rounded-lg tech__item p-1 mb-1">
+                            <div class="col-12 tech__image"><img class="tech__imagesrc" src="./img/favicon.png"></div>
+                            <div class="col-12 tech__title">To the stars</div>
+                            <div class="row">
+                                
+                                <div class="col-12 tech__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="tech__science">99</span></div>
+                                <div class="col-12">
+                                    <button class="tech__btn_obtain btn btn-sm btn-success">Obtain</button>
+                                    <button class="tech__btn_info btn btn-sm btn-info">Info</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tech34" class="col-4 tech__block align-content-center justify-content-center text-center rounded-lg tech__item p-1 mb-1">
+                            <div class="col-12 tech__image"><img class="tech__imagesrc" src="./img/favicon.png"></div>
+                            <div class="col-12 tech__title">To the stars</div>
+                            <div class="row">
+                                
+                                <div class="col-12 tech__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="tech__science">99</span></div>
+                                <div class="col-12">
+                                    <button class="tech__btn_obtain btn btn-sm btn-success">Obtain</button>
+                                    <button class="tech__btn_info btn btn-sm btn-info">Info</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tech35" class="col-4 tech__block align-content-center justify-content-center text-center rounded-lg tech__item p-1 mb-1">
+                            <div class="col-12 tech__image"><img class="tech__imagesrc" src="./img/favicon.png"></div>
+                            <div class="col-12 tech__title">To the stars</div>
+                            <div class="row">
+                                
+                                <div class="col-12 tech__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="tech__science">99</span></div>
+                                <div class="col-12">
+                                    <button class="tech__btn_obtain btn btn-sm btn-success">Obtain</button>
+                                    <button class="tech__btn_info btn btn-sm btn-info">Info</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tech36" class="col-4 tech__block align-content-center justify-content-center text-center rounded-lg tech__item p-1 mb-1">
+                            <div class="col-12 tech__image"><img class="tech__imagesrc" src="./img/favicon.png"></div>
+                            <div class="col-12 tech__title">To the stars</div>
+                            <div class="row">
+                                
+                                <div class="col-12 tech__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="tech__science">99</span></div>
+                                <div class="col-12">
+                                    <button class="tech__btn_obtain btn btn-sm btn-success">Obtain</button>
+                                    <button class="tech__btn_info btn btn-sm btn-info">Info</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tech37" class="col-4 tech__block align-content-center justify-content-center text-center rounded-lg tech__item p-1 mb-1">
+                            <div class="col-12 tech__image"><img class="tech__imagesrc" src="./img/favicon.png"></div>
+                            <div class="col-12 tech__title">To the stars</div>
+                            <div class="row">
+                                
+                                <div class="col-12 tech__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="tech__science">99</span></div>
+                                <div class="col-12">
+                                    <button class="tech__btn_obtain btn btn-sm btn-success">Obtain</button>
+                                    <button class="tech__btn_info btn btn-sm btn-info">Info</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    
+                </div>
+                
+                    <!-- <div class="row">
+                        <button class="btn btn-sm btn-info">Ver misión</button>
+                    </div> -->
+            </div>
+            <div class="col-3 jumbotron myContainer">
+                <h2>Units</h2>
+                <hr>
+
+                <div class="unit__list">
+
+                    <div id="unit1" class="row unit__item align-content-center justify-content-center text-center rounded-lg p-1 mb-1">
+                        
+                        <div class="row">
+                            <div class="col-12 unit__title">Special mining</div>
+                            <div class="col-12 unit__counter"><img class="unit__img" src="./img/favicon.png" alt=""> x<span class="unit__qty">99</span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-auto unit__resource ml-3"> <img src="./img/icons/resources/WATER.png">x<span class="unit__water">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ENERGY.png">x<span class="unit__energy">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/MATERIALS.png">x<span class="unit__materials">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ANTIMATTER.png">x<span class="unit__antimatter">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="unit__science">99</span></div>
+                        </div>
+                        <div class="col-12"><button class="unit__btn_obtain btn btn-sm btn-success">Obtain</button></div>
+                    </div>
+
+                    <div id="unit2" class="row unit__item align-content-center justify-content-center text-center rounded-lg p-1 mb-1">
+                        
+                        <div class="row">
+                            <div class="col-12 unit__title">Special mining</div>
+                            <div class="col-12 unit__counter"><img class="unit__img" src="./img/favicon.png" alt=""> x<span class="unit__qty">99</span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-auto unit__resource ml-3"> <img src="./img/icons/resources/WATER.png">x<span class="unit__water">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ENERGY.png">x<span class="unit__energy">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/MATERIALS.png">x<span class="unit__materials">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ANTIMATTER.png">x<span class="unit__antimatter">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="unit__science">99</span></div>
+                        </div>
+                        <div class="col-12"><button class="unit__btn_obtain btn btn-sm btn-success">Obtain</button></div>
+                    </div>
+
+                    <div id="unit3" class="row unit__item align-content-center justify-content-center text-center rounded-lg p-1 mb-1">
+                        
+                        <div class="row">
+                            <div class="col-12 unit__title">Special mining</div>
+                            <div class="col-12 unit__counter"><img class="unit__img" src="./img/favicon.png" alt=""> x<span class="unit__qty">99</span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-auto unit__resource ml-3"> <img src="./img/icons/resources/WATER.png">x<span class="unit__water">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ENERGY.png">x<span class="unit__energy">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/MATERIALS.png">x<span class="unit__materials">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ANTIMATTER.png">x<span class="unit__antimatter">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="unit__science">99</span></div>
+                        </div>
+                        <div class="col-12"><button class="unit__btn_obtain btn btn-sm btn-success">Obtain</button></div>
+                    </div>
+
+                    <div id="unit4" class="row unit__item align-content-center justify-content-center text-center rounded-lg p-1 mb-1">
+                        
+                        <div class="row">
+                            <div class="col-12 unit__title">Special mining</div>
+                            <div class="col-12 unit__counter"><img class="unit__img" src="./img/favicon.png" alt=""> x<span class="unit__qty">99</span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-auto unit__resource ml-3"> <img src="./img/icons/resources/WATER.png">x<span class="unit__water">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ENERGY.png">x<span class="unit__energy">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/MATERIALS.png">x<span class="unit__materials">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ANTIMATTER.png">x<span class="unit__antimatter">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="unit__science">99</span></div>
+                        </div>
+                        <div class="col-12"><button class="unit__btn_obtain btn btn-sm btn-success">Obtain</button></div>
+                    </div>
+
+                    <div id="unit5" class="row unit__item align-content-center justify-content-center text-center rounded-lg p-1 mb-1">
+                        
+                        <div class="row">
+                            <div class="col-12 unit__title">Special mining</div>
+                            <div class="col-12 unit__counter"><img class="unit__img" src="./img/favicon.png" alt=""> x<span class="unit__qty">99</span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-auto unit__resource ml-3"> <img src="./img/icons/resources/WATER.png">x<span class="unit__water">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ENERGY.png">x<span class="unit__energy">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/MATERIALS.png">x<span class="unit__materials">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ANTIMATTER.png">x<span class="unit__antimatter">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="unit__science">99</span></div>
+                        </div>
+                        <div class="col-12"><button class="unit__btn_obtain btn btn-sm btn-success">Obtain</button></div>
+                    </div>
+
+                    <div id="unit6" class="row unit__item align-content-center justify-content-center text-center rounded-lg p-1 mb-1">
+                        
+                        <div class="row">
+                            <div class="col-12 unit__title">Special mining</div>
+                            <div class="col-12 unit__counter"><img class="unit__img" src="./img/favicon.png" alt=""> x<span class="unit__qty">99</span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-auto unit__resource ml-3"> <img src="./img/icons/resources/WATER.png">x<span class="unit__water">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ENERGY.png">x<span class="unit__energy">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/MATERIALS.png">x<span class="unit__materials">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ANTIMATTER.png">x<span class="unit__antimatter">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="unit__science">99</span></div>
+                        </div>
+                        <div class="col-12"><button class="unit__btn_obtain btn btn-sm btn-success">Obtain</button></div>
+                    </div>
+
+                    <div id="unit7" class="row unit__item align-content-center justify-content-center text-center rounded-lg p-1 mb-1">
+                        
+                        <div class="row">
+                            <div class="col-12 unit__title">Special mining</div>
+                            <div class="col-12 unit__counter"><img class="unit__img" src="./img/favicon.png" alt=""> x<span class="unit__qty">99</span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-auto unit__resource ml-3"> <img src="./img/icons/resources/WATER.png">x<span class="unit__water">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ENERGY.png">x<span class="unit__energy">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/MATERIALS.png">x<span class="unit__materials">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ANTIMATTER.png">x<span class="unit__antimatter">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="unit__science">99</span></div>
+                        </div>
+                        <div class="col-12"><button class="unit__btn_obtain btn btn-sm btn-success">Obtain</button></div>
+                    </div>
+
+                    <div id="unit8" class="row unit__item align-content-center justify-content-center text-center rounded-lg p-1 mb-1">
+                        
+                        <div class="row">
+                            <div class="col-12 unit__title">Special mining</div>
+                            <div class="col-12 unit__counter"><img class="unit__img" src="./img/favicon.png" alt=""> x<span class="unit__qty">99</span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-auto unit__resource ml-3"> <img src="./img/icons/resources/WATER.png">x<span class="unit__water">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ENERGY.png">x<span class="unit__energy">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/MATERIALS.png">x<span class="unit__materials">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ANTIMATTER.png">x<span class="unit__antimatter">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="unit__science">99</span></div>
+                        </div>
+                        <div class="col-12"><button class="unit__btn_obtain btn btn-sm btn-success">Obtain</button></div>
+                    </div>
+
+                    <div id="unit9" class="row unit__item align-content-center justify-content-center text-center rounded-lg p-1 mb-1">
+                        
+                        <div class="row">
+                            <div class="col-12 unit__title">Special mining</div>
+                            <div class="col-12 unit__counter"><img class="unit__img" src="./img/favicon.png" alt=""> x<span class="unit__qty">99</span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-auto unit__resource ml-3"> <img src="./img/icons/resources/WATER.png">x<span class="unit__water">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ENERGY.png">x<span class="unit__energy">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/MATERIALS.png">x<span class="unit__materials">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ANTIMATTER.png">x<span class="unit__antimatter">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="unit__science">99</span></div>
+                        </div>
+                        <div class="col-12"><button class="unit__btn_obtain btn btn-sm btn-success">Obtain</button></div>
+                    </div>
+
+                    <div id="unit10" class="row unit__item align-content-center justify-content-center text-center rounded-lg p-1 mb-1">
+                        
+                        <div class="row">
+                            <div class="col-12 unit__title">Special mining</div>
+                            <div class="col-12 unit__counter"><img class="unit__img" src="./img/favicon.png" alt=""> x<span class="unit__qty">99</span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-auto unit__resource ml-3"> <img src="./img/icons/resources/WATER.png">x<span class="unit__water">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ENERGY.png">x<span class="unit__energy">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/MATERIALS.png">x<span class="unit__materials">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ANTIMATTER.png">x<span class="unit__antimatter">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="unit__science">99</span></div>
+                        </div>
+                        <div class="col-12"><button class="unit__btn_obtain btn btn-sm btn-success">Obtain</button></div>
+                    </div>
+
+                    <div id="unit11" class="row unit__item align-content-center justify-content-center text-center rounded-lg p-1 mb-1">
+                        
+                        <div class="row">
+                            <div class="col-12 unit__title">Special mining</div>
+                            <div class="col-12 unit__counter"><img class="unit__img" src="./img/favicon.png" alt=""> x<span class="unit__qty">99</span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-auto unit__resource ml-3"> <img src="./img/icons/resources/WATER.png">x<span class="unit__water">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ENERGY.png">x<span class="unit__energy">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/MATERIALS.png">x<span class="unit__materials">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ANTIMATTER.png">x<span class="unit__antimatter">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="unit__science">99</span></div>
+                        </div>
+                        <div class="col-12"><button class="unit__btn_obtain btn btn-sm btn-success">Obtain</button></div>
+                    </div>
+
+                    <div id="unit12" class="row unit__item align-content-center justify-content-center text-center rounded-lg p-1 mb-1">
+                        
+                        <div class="row">
+                            <div class="col-12 unit__title">Special mining</div>
+                            <div class="col-12 unit__counter"><img class="unit__img" src="./img/favicon.png" alt=""> x<span class="unit__qty">99</span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-auto unit__resource ml-3"> <img src="./img/icons/resources/WATER.png">x<span class="unit__water">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ENERGY.png">x<span class="unit__energy">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/MATERIALS.png">x<span class="unit__materials">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ANTIMATTER.png">x<span class="unit__antimatter">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="unit__science">99</span></div>
+                        </div>
+                        <div class="col-12"><button class="unit__btn_obtain btn btn-sm btn-success">Obtain</button></div>
+                    </div>
+
+                    <div id="unit13" class="row unit__item align-content-center justify-content-center text-center rounded-lg p-1 mb-1">
+                        
+                        <div class="row">
+                            <div class="col-12 unit__title">Special mining</div>
+                            <div class="col-12 unit__counter"><img class="unit__img" src="./img/favicon.png" alt=""> x<span class="unit__qty">99</span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-auto unit__resource ml-3"> <img src="./img/icons/resources/WATER.png">x<span class="unit__water">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ENERGY.png">x<span class="unit__energy">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/MATERIALS.png">x<span class="unit__materials">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ANTIMATTER.png">x<span class="unit__antimatter">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="unit__science">99</span></div>
+                        </div>
+                        <div class="col-12"><button class="unit__btn_obtain btn btn-sm btn-success">Obtain</button></div>
+                    </div>
+
+                    <div id="unit14" class="row unit__item align-content-center justify-content-center text-center rounded-lg p-1 mb-1">
+                        
+                        <div class="row">
+                            <div class="col-12 unit__title">Special mining</div>
+                            <div class="col-12 unit__counter"><img class="unit__img" src="./img/favicon.png" alt=""> x<span class="unit__qty">99</span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-auto unit__resource ml-3"> <img src="./img/icons/resources/WATER.png">x<span class="unit__water">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ENERGY.png">x<span class="unit__energy">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/MATERIALS.png">x<span class="unit__materials">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ANTIMATTER.png">x<span class="unit__antimatter">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="unit__science">99</span></div>
+                        </div>
+                        <div class="col-12"><button class="unit__btn_obtain btn btn-sm btn-success">Obtain</button></div>
+                    </div>
+
+                    <div id="unit15" class="row unit__item align-content-center justify-content-center text-center rounded-lg p-1 mb-1">
+                        
+                        <div class="row">
+                            <div class="col-12 unit__title">Special mining</div>
+                            <div class="col-12 unit__counter"><img class="unit__img" src="./img/favicon.png" alt=""> x<span class="unit__qty">99</span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-auto unit__resource ml-3"> <img src="./img/icons/resources/WATER.png">x<span class="unit__water">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ENERGY.png">x<span class="unit__energy">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/MATERIALS.png">x<span class="unit__materials">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ANTIMATTER.png">x<span class="unit__antimatter">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="unit__science">99</span></div>
+                        </div>
+                        <div class="col-12"><button class="unit__btn_obtain btn btn-sm btn-success">Obtain</button></div>
+                    </div>
+
+                    <div id="unit16" class="row unit__item align-content-center justify-content-center text-center rounded-lg p-1 mb-1">
+                        
+                        <div class="row">
+                            <div class="col-12 unit__title">Special mining</div>
+                            <div class="col-12 unit__counter"><img class="unit__img" src="./img/favicon.png" alt=""> x<span class="unit__qty">99</span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-auto unit__resource ml-3"> <img src="./img/icons/resources/WATER.png">x<span class="unit__water">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ENERGY.png">x<span class="unit__energy">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/MATERIALS.png">x<span class="unit__materials">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ANTIMATTER.png">x<span class="unit__antimatter">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="unit__science">99</span></div>
+                        </div>
+                        <div class="col-12"><button class="unit__btn_obtain btn btn-sm btn-success">Obtain</button></div>
+                    </div>
+
+                    <div id="unit17" class="row unit__item align-content-center justify-content-center text-center rounded-lg p-1 mb-1">
+                        
+                        <div class="row">
+                            <div class="col-12 unit__title">Special mining</div>
+                            <div class="col-12 unit__counter"><img class="unit__img" src="./img/favicon.png" alt=""> x<span class="unit__qty">99</span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-auto unit__resource ml-3"> <img src="./img/icons/resources/WATER.png">x<span class="unit__water">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ENERGY.png">x<span class="unit__energy">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/MATERIALS.png">x<span class="unit__materials">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ANTIMATTER.png">x<span class="unit__antimatter">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="unit__science">99</span></div>
+                        </div>
+                        <div class="col-12"><button class="unit__btn_obtain btn btn-sm btn-success">Obtain</button></div>
+                    </div>
+
+                    <div id="unit18" class="row unit__item align-content-center justify-content-center text-center rounded-lg p-1 mb-1">
+                        
+                        <div class="row">
+                            <div class="col-12 unit__title">Special mining</div>
+                            <div class="col-12 unit__counter"><img class="unit__img" src="./img/favicon.png" alt=""> x<span class="unit__qty">99</span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-auto unit__resource ml-3"> <img src="./img/icons/resources/WATER.png">x<span class="unit__water">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ENERGY.png">x<span class="unit__energy">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/MATERIALS.png">x<span class="unit__materials">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ANTIMATTER.png">x<span class="unit__antimatter">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="unit__science">99</span></div>
+                        </div>
+                        <div class="col-12"><button class="unit__btn_obtain btn btn-sm btn-success">Obtain</button></div>
+                    </div>
+
+                    <div id="unit19" class="row unit__item align-content-center justify-content-center text-center rounded-lg p-1 mb-1">
+                        
+                        <div class="row">
+                            <div class="col-12 unit__title">Special mining</div>
+                            <div class="col-12 unit__counter"><img class="unit__img" src="./img/favicon.png" alt=""> x<span class="unit__qty">99</span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-auto unit__resource ml-3"> <img src="./img/icons/resources/WATER.png">x<span class="unit__water">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ENERGY.png">x<span class="unit__energy">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/MATERIALS.png">x<span class="unit__materials">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ANTIMATTER.png">x<span class="unit__antimatter">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="unit__science">99</span></div>
+                        </div>
+                        <div class="col-12"><button class="unit__btn_obtain btn btn-sm btn-success">Obtain</button></div>
+                    </div>
+
+                    <div id="unit20" class="row unit__item align-content-center justify-content-center text-center rounded-lg p-1 mb-1">
+                        
+                        <div class="row">
+                            <div class="col-12 unit__title">Special mining</div>
+                            <div class="col-12 unit__counter"><img class="unit__img" src="./img/favicon.png" alt=""> x<span class="unit__qty">99</span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-auto unit__resource ml-3"> <img src="./img/icons/resources/WATER.png">x<span class="unit__water">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ENERGY.png">x<span class="unit__energy">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/MATERIALS.png">x<span class="unit__materials">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ANTIMATTER.png">x<span class="unit__antimatter">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="unit__science">99</span></div>
+                        </div>
+                        <div class="col-12"><button class="unit__btn_obtain btn btn-sm btn-success">Obtain</button></div>
+                    </div>
+
+                    <div id="unit21" class="row unit__item align-content-center justify-content-center text-center rounded-lg p-1 mb-1">
+                        
+                        <div class="row">
+                            <div class="col-12 unit__title">Special mining</div>
+                            <div class="col-12 unit__counter"><img class="unit__img" src="./img/favicon.png" alt=""> x<span class="unit__qty">99</span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-auto unit__resource ml-3"> <img src="./img/icons/resources/WATER.png">x<span class="unit__water">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ENERGY.png">x<span class="unit__energy">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/MATERIALS.png">x<span class="unit__materials">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ANTIMATTER.png">x<span class="unit__antimatter">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="unit__science">99</span></div>
+                        </div>
+                        <div class="col-12"><button class="unit__btn_obtain btn btn-sm btn-success">Obtain</button></div>
+                    </div>
+
+                    <div id="unit22" class="row unit__item align-content-center justify-content-center text-center rounded-lg p-1 mb-1">
+                        
+                        <div class="row">
+                            <div class="col-12 unit__title">Special mining</div>
+                            <div class="col-12 unit__counter"><img class="unit__img" src="./img/favicon.png" alt=""> x<span class="unit__qty">99</span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-auto unit__resource ml-3"> <img src="./img/icons/resources/WATER.png">x<span class="unit__water">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ENERGY.png">x<span class="unit__energy">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/MATERIALS.png">x<span class="unit__materials">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ANTIMATTER.png">x<span class="unit__antimatter">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="unit__science">99</span></div>
+                        </div>
+                        <div class="col-12"><button class="unit__btn_obtain btn btn-sm btn-success">Obtain</button></div>
+                    </div>
+
+                    <div id="unit23" class="row unit__item align-content-center justify-content-center text-center rounded-lg p-1 mb-1">
+                        
+                        <div class="row">
+                            <div class="col-12 unit__title">Special mining</div>
+                            <div class="col-12 unit__counter"><img class="unit__img" src="./img/favicon.png" alt=""> x<span class="unit__qty">99</span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-auto unit__resource ml-3"> <img src="./img/icons/resources/WATER.png">x<span class="unit__water">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ENERGY.png">x<span class="unit__energy">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/MATERIALS.png">x<span class="unit__materials">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ANTIMATTER.png">x<span class="unit__antimatter">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="unit__science">99</span></div>
+                        </div>
+                        <div class="col-12"><button class="unit__btn_obtain btn btn-sm btn-success">Obtain</button></div>
+                    </div>
+
+                    <div id="unit24" class="row unit__item align-content-center justify-content-center text-center rounded-lg p-1 mb-1">
+                        
+                        <div class="row">
+                            <div class="col-12 unit__title">Special mining</div>
+                            <div class="col-12 unit__counter"><img class="unit__img" src="./img/favicon.png" alt=""> x<span class="unit__qty">99</span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-auto unit__resource ml-3"> <img src="./img/icons/resources/WATER.png">x<span class="unit__water">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ENERGY.png">x<span class="unit__energy">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/MATERIALS.png">x<span class="unit__materials">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ANTIMATTER.png">x<span class="unit__antimatter">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="unit__science">99</span></div>
+                        </div>
+                        <div class="col-12"><button class="unit__btn_obtain btn btn-sm btn-success">Obtain</button></div>
+                    </div>
+
+                    <div id="unit25" class="row unit__item align-content-center justify-content-center text-center rounded-lg p-1 mb-1">
+                        
+                        <div class="row">
+                            <div class="col-12 unit__title">Special mining</div>
+                            <div class="col-12 unit__counter"><img class="unit__img" src="./img/favicon.png" alt=""> x<span class="unit__qty">99</span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-auto unit__resource ml-3"> <img src="./img/icons/resources/WATER.png">x<span class="unit__water">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ENERGY.png">x<span class="unit__energy">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/MATERIALS.png">x<span class="unit__materials">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ANTIMATTER.png">x<span class="unit__antimatter">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="unit__science">99</span></div>
+                        </div>
+                        <div class="col-12"><button class="unit__btn_obtain btn btn-sm btn-success">Obtain</button></div>
+                    </div>
+
+                    <div id="unit26" class="row unit__item align-content-center justify-content-center text-center rounded-lg p-1 mb-1">
+                        
+                        <div class="row">
+                            <div class="col-12 unit__title">Special mining</div>
+                            <div class="col-12 unit__counter"><img class="unit__img" src="./img/favicon.png" alt=""> x<span class="unit__qty">99</span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-auto unit__resource ml-3"> <img src="./img/icons/resources/WATER.png">x<span class="unit__water">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ENERGY.png">x<span class="unit__energy">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/MATERIALS.png">x<span class="unit__materials">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ANTIMATTER.png">x<span class="unit__antimatter">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="unit__science">99</span></div>
+                        </div>
+                        <div class="col-12"><button class="unit__btn_obtain btn btn-sm btn-success">Obtain</button></div>
+                    </div>
+
+                    <div id="unit27" class="row unit__item align-content-center justify-content-center text-center rounded-lg p-1 mb-1">
+                        
+                        <div class="row">
+                            <div class="col-12 unit__title">Special mining</div>
+                            <div class="col-12 unit__counter"><img class="unit__img" src="./img/favicon.png" alt=""> x<span class="unit__qty">99</span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-auto unit__resource ml-3"> <img src="./img/icons/resources/WATER.png">x<span class="unit__water">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ENERGY.png">x<span class="unit__energy">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/MATERIALS.png">x<span class="unit__materials">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/ANTIMATTER.png">x<span class="unit__antimatter">99</span></div>
+                            <div class="col-auto unit__resource"> <img src="./img/icons/resources/SCIENCE.png">x<span class="unit__science">99</span></div>
+                        </div>
+                        <div class="col-12"><button class="unit__btn_obtain btn btn-sm btn-success">Obtain</button></div>
+                    </div>
+
+                    
+                    
+                </div>
+                
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="game"></div>
+    <script>
+        var x = document.getElementById("myAudio"); 
+        function audiobtn(){
+            if(x.paused){
+                playAudio();
+                document.querySelector(".ab").classList.add("btn-primary");
+                document.querySelector(".ab").classList.remove("btn-secondary");
+            } else{
+                pauseAudio();
+                document.querySelector(".ab").classList.remove("btn-primary");
+                document.querySelector(".ab").classList.add("btn-secondary");
+            }
+        }
+        function instbtn(){
+            x.play();
+            document.querySelector(".ab").classList.add("btn-primary");
+            document.querySelector(".ab").classList.remove("btn-secondary");
+        }
+        
+        function playAudio() { 
+          x.play(); 
+        } 
+        
+        function pauseAudio() { 
+          x.pause(); 
+        }
+        function disappear(){
+            document.querySelector(".popup__field").style.visibility = "hidden";
+            document.querySelector(".popup__img").style.visibility = "hidden";
+            document.querySelector(".popup__mess").style.visibility = "hidden";
+        }
+    </script>
+</body>
+</html>

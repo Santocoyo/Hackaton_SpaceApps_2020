@@ -1,0 +1,258 @@
+@font-face{
+    font-family: "StellarLight";
+    src: url("./fonts/Stellar-light.otf")
+}
+@font-face{
+    font-family: "Stellar";
+    src: url("./fonts/Stellar-Regular.otf")
+}
+@font-face{
+    font-family: "StellarMedium";
+    src: url("./fonts/Stellar-Medium.otf")
+}
+@font-face{
+    font-family: "StellarBold";
+    src: url("./fonts/Stellar-Bold.otf")
+}
+.test{
+    background-color: red !important;
+}
+html{
+    background-image: url("img/background.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: "Stellar", Fallback, sans-serif !important;
+}
+h1{
+    font-family: "StellarMedium", Fallback, sans-serif !important;
+}
+h2{
+    font-family: "StellarMedium", Fallback, sans-serif !important;
+}
+p{
+    font-family: "StellarMedium", Fallback, sans-serif !important;
+}
+body{
+    background-image: url("./img/background.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: black !important;
+    color: white !important;
+}
+h1{
+    color: white;
+}
+.audioButton{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+}
+.instButton{
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    top: 0;
+}
+.popup__field{
+    z-index: 1;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    color: black;
+    visibility: hidden;
+}
+.popup__field .jumbotron{
+    background-color: #777777;
+    opacity: 0.9;
+}
+.popup__field h1{
+    color: black;
+}
+.popup__exit{
+    position: fixed;
+    left: 77%;
+    transform: translateY(-40px);
+}
+.popup__img{
+    width: 250px;
+}
+.header{
+    background-color: rgba(115, 147, 233, 0.705);
+    /* width: 80%;
+    height: 30px;
+    border-radius: 10px;
+    text-align: center;
+    margin: auto; */
+}
+.myContainer{
+    color: black;
+    padding-top: 20px !important;
+    padding-bottom: 2em !important;
+    background-color: rgba(221, 240, 240, 0.6) !important;
+}
+.tech__panel{
+    color: black;
+    padding-top: 20px !important;
+    padding-bottom: 2em !important;
+    background-color: #cccccc66 !important;
+}
+.mission__item{
+    opacity: 0.9;
+}
+.mission__list{
+    color: white;
+    font-size: 0.8rem;
+}
+.mission__image{
+    padding-left: 3px !important;
+    padding-right: 3px !important;
+}
+.mission__image img{
+    width: 35px;
+    transform: translate(-5px, 5px);
+}
+.mission__title{
+    font-size: 1.2rem;
+}
+.mission__completed{
+    /* background-color: rgb(107, 172, 43) !important; */
+    background-color:rgb(107, 172, 43) !important;
+    color: black !important;
+}
+.mission__completed .mission__btn-try{
+    display: none;
+}
+.mission__completed .mission__btn-info{
+    display: inline;
+}
+.mission__unblock{
+    background-color: cadetblue;
+    color: black;
+}
+.mission__unblock .mission__btn-try{
+    display: inline;
+}
+.mission__unblock .mission__btn-info{
+    display: inline;
+}
+.mission__block{
+    background-color: #343a40;
+    color: white;
+}
+.mission__block .mission__btn-try{
+    display: none;
+}
+.mission__block .mission__btn-info{
+    display: inline;
+}
+.mission__resource{
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+}
+.mission__resource img{
+    width: 20px;
+}
+
+.tech__list{
+    font-size: 0.8rem;
+}
+.tech__item{
+    border: 1px solid black;
+    opacity: 0.9;
+}
+.tech__image img{
+    width: 35px;
+}
+.tech__title{
+    font-size: 1.2rem;
+}
+
+.tech__completed{
+    background-color: rgb(107, 172, 43) !important;
+    color: black !important;
+}
+.tech__completed .tech__btn_obtain{
+    display: none;
+}
+.tech__completed .tech__btn_info{
+    display: inline;
+}
+.tech__unblock{
+    background-color: cadetblue;
+    color: black;
+}
+.tech__unblock .tech__btn_obtain{
+    display: inline;
+}
+.tech__unblock .tech__btn_info{
+    display: inline;
+}
+.tech__block{
+    background-color: #343a40;
+    color: white;
+}
+.tech__block .tech__btn_obtain{
+    display: none;
+}
+.tech__block .tech__btn_info{
+    display: inline;
+}
+.tech__resource img{
+    width: 25px;
+}
+
+.tech__science{
+    font-size: 1.2rem;
+}
+
+.unit__list{
+    color: white;
+    font-size: 0.8rem;
+}
+.unit__item{
+    opacity: 0.9;
+}
+.unit__counter{
+    font-size: 1.2rem;
+}
+.unit__img{
+    width: 40px;
+}
+.unit__title{
+    font-size: 1.2rem;
+}
+
+.unit__resource{
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+}
+.unit__resource img{
+    width: 13px;
+}
+.unit__unblock{
+    background-color: cadetblue;
+    color: black;
+}
+.unit__block{
+    background-color: #343a40;
+    color: white;
+}
+.unit__block .unit__btn_obtain{
+    display: none;
+}
+
+/* .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
+.col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,
+.col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,
+.col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,
+.col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,
+.col-xl-auto {
+  position: relative !important;
+  width: 100%;
+  padding-right: 10px !important;
+  padding-left: 10px !important;
+} */
