@@ -30,7 +30,7 @@ document.querySelector(".inbu").addEventListener("click", () => {
     document.querySelector(".popup__mess").style.visibility = "hidden";
     document.querySelector(".popup__title").textContent = "Instructions"
     document.querySelector(".popup__img").src = "./img/favicon.png";
-    document.querySelector(".popup__desc").textContent = "Complete all missions to become an intergallactic civilization!, each mission requires certain number of units and specific techologies. Start obtaining units to complete missions or gather resources, you'll need water, energy, materials or anti-matter to build them.Don't forget to obtain new technology advancements with science points"
+    document.querySelector(".popup__desc").textContent = "Complete all missions to become an gallactic civilization!, each mission requires certain number of units and specific techologies. Start obtaining units to complete missions or gather resources, you'll need water, energy, materials or anti-matter to build them.Don't forget to obtain new technology advancements with science points"
 })
 
 //Resource controller

@@ -491,7 +491,7 @@ const dataBase = {
 			techneed: [ 31 ],
 			resneed: [ [ 1, 0 ], [ 2, 300000 ], [ 3, 40000 ], [ 4, 0 ], [ 5, 0 ] ],
 			resprod: [ [ 1, 0 ], [ 2, 2000 ], [ 3, 0 ], [ 4, 0 ], [ 5, 0 ] ],
-			max: 1,
+			max: 2,
 			expendable: false
 		},
 		{
@@ -500,7 +500,7 @@ const dataBase = {
 			techneed: [ 32 ],
 			resneed: [ [ 1, 0 ], [ 2, 100000 ], [ 3, 5000 ], [ 4, 120 ], [ 5, 0 ] ],
 			resprod: [ [ 1, 0 ], [ 2, 500 ], [ 3, 0 ], [ 4, 6 ], [ 5, 0 ] ],
-			max: 3,
+			max: 5,
 			expendable: true
 		},
 		{
@@ -516,16 +516,16 @@ const dataBase = {
 			name: 'Dark Energy Device',
 			id: 24,
 			techneed: [ 34 ],
-			resneed: [ [ 1, 0 ], [ 2, 300000 ], [ 3, 5000 ], [ 4, 1500 ], [ 5, 0 ] ],
+			resneed: [ [ 1, 0 ], [ 2, 300000 ], [ 3, 5000 ], [ 4, 500 ], [ 5, 0 ] ],
 			resprod: [ [ 1, 0 ], [ 2, 0 ], [ 3, 0 ], [ 4, 0 ], [ 5, 0 ] ],
-			max: 1,
+			max: 3,
 			expendable: false
 		},
 		{
 			name: 'Warp Drive Starship',
 			id: 25,
 			techneed: [ 35 ],
-			resneed: [ [ 1, 800 ], [ 2, 1000000 ], [ 3, 5000 ], [ 4, 3000 ], [ 5, 0 ] ],
+			resneed: [ [ 1, 800 ], [ 2, 1000000 ], [ 3, 5000 ], [ 4, 500 ], [ 5, 0 ] ],
 			resprod: [ [ 1, 0 ], [ 2, 0 ], [ 3, 0 ], [ 4, 0 ], [ 5, 0 ] ],
 			max: 1,
 			expendable: true

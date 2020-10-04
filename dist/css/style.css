@@ -18,11 +18,11 @@
     background-color: red !important;
 }
 html{
-    background-image: url("img/background.jpg") no-repeat center center fixed; 
+    /* background-image: url("img/background.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    background-size: cover; */
     font-family: "Stellar", Fallback, sans-serif !important;
 }
 h1{
@@ -35,7 +35,7 @@ p{
     font-family: "StellarMedium", Fallback, sans-serif !important;
 }
 body{
-    background-image: url("./img/background.jpg") no-repeat center center fixed; 
+    /* background-image: url("./img/background.jpg") no-repeat center center fixed;  */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
